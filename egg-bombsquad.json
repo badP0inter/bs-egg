@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n# Server Files: \/mnt\/server\r\nPROJECT=bombsquad\r\n\r\napt -y update; apt -y install wget\r\ncd \/mnt\/server\r\n\r\nwget -r -l 1 -nd --accept-regex \".*_Server_Linux_x86_64_*\"                          \\\r\n        'https:\/\/files.ballistica.net\/bombsquad\/builds\/';                           \\\r\n        rm index.html; tar --strip-components=1 -xzvf BombSquad_Server_*.tar.gz*;   \\\r\n        rm BombSquad_Server_*.tar.gz; chmod +x bombsquad_server; chmod +x bombsquad_headless",
+            "script": "#!\/bin\/bash\r\n# Server Files: \/mnt\/server\r\nPROJECT=bombsquad\r\n\r\napt -y update; apt -y install wget\r\ncd \/mnt\/server\r\n\r\nwget -r -l 1 -nd --accept-regex \".*_Server_Linux_x86_64_*\"                          \\\r\n        'https:\/\/files.ballistica.net\/bombsquad\/builds\/';                           \\\r\n        rm index.html; tar --strip-components=1 -xzvf BombSquad_Server_*.tar.gz*;   \\\r\n        rm BombSquad_Server_*.tar.gz; chmod +x bombsquad_server",
             "container": "debian:buster",
             "entrypoint": "bash"
         }
