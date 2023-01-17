@@ -41,6 +41,3 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-        secrets: |
-            "PUSH_DEPLOYER=${{ secrets.PUSH_DEPLOYER }}"
-            "PUSH_PAT=${{ secrets.PUSH_PAT }}"
